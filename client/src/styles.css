@@ -1,0 +1,189 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+body {
+  background-color: #fafafa;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.btn-success {
+  background-color: #198754;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(25, 135, 84, 0.1);
+  font-weight: 500;
+}
+.btn-success:hover {
+  background-color: #157347;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(25, 135, 84, 0.2);
+}
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.feature-card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(10px);
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(25, 135, 84, 0.15);
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+}
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+.text-success {
+  color: #198754 !important;
+}
+.link-hover {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.link-hover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #198754;
+  transition: width 0.3s ease;
+}
+.link-hover:hover::after {
+  width: 100%;
+}
+.form-control, .form-select {
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+.form-control:focus, .form-select:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+}
+.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.dark .bg-white,
+.dark .bg-light {
+  background-color: #2d2d2d !important;
+  transition: background-color 0.3s ease;
+}
+.dark .navbar {
+  background-color: rgba(45, 45, 45, 0.9);
+  backdrop-filter: blur(10px);
+}
+.dark .text-dark,
+.dark .text-muted,
+.dark .card-title,
+.dark .contact-info,
+.dark .rec,
+.dark .form-label,
+.dark td,
+.dark th {
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+.dark iframe {
+  filter: invert(90%) hue-rotate(180deg);
+  transition: filter 0.3s ease;
+}
+.dark .text-secondary,
+.dark .card-text {
+  color: #a0a0a0 !important;
+  transition: color 0.3s ease;
+}
+.dark .card {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.dark .feature-card {
+  background: linear-gradient(to bottom right, rgba(45, 45, 45, 0.9), rgba(45, 45, 45, 0.8));
+  transition: all 0.3s ease;
+}
+.dark .feature-card:hover {
+  background: linear-gradient(to bottom right, rgba(45, 45, 45, 0.95), rgba(45, 45, 45, 0.85));
+}
+.dark .table {
+  color: #ffffff;
+}
+.dark .table-bordered {
+  border-color: #404040;
+}
+.dark .table > :not(caption) > * > * {
+  border-color: #404040;
+  background-color: #2d2d2d;
+}
+.dark .form-control {
+  background-color: #1a1a1a;
+  border-color: #404040;
+  color: #ffffff;
+}
+.dark .form-control:focus {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+.dark .form-select {
+  background-color: #1a1a1a;
+  border-color: #404040;
+  color: #ffffff;
+}
+.dark .alert-info {
+  background-color: #1e3a5f;
+  border-color: #2d5a8f;
+  color: #ffffff;
+}
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.mobile-menu-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.mobile-menu-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
